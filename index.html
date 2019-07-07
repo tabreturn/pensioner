@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+    body {
+      background-color: #797;
+    }
+    .outlined {
+      float: left;
+    }
+    .outlined * {
+      /*outline: 1px solid rgba(0,0,0,0.15);*/
+    }
+  </style>
+  <script src="pensioner.js"></script>
+</head>
+
+<body>
+  <img id="nc_src" src="nc_rb.gif" /><br />
+  <div class="outlined" id="nc_lrg"></div>
+  <div class="outlined" id="nc_lrg_gs_gimp"></div>
+  <div class="outlined" id="nc_lrg_gs_avg"></div>
+  <br style="clear:both" />
+  <div class="outlined" id="nc_lrg_r" style="background-color:#047"></div>
+
+  <div class="test">
+    <h1>Test</h1>
+    <p>123 ...</p>
+  </div>
+
+  <div class="test">
+    <h1>Test</h1>
+    <p>123 ...</p>
+  </div>
+
+  <style>
+    .test {
+      background-color: rgba(255,0,0,0.3);
+      border: 3px solid orange;
+      clear: both;
+      color: pink;
+      margin: 10px 0;
+      outline: 3px solid rgb(0,0,255);
+    }
+    .test p {
+      background-color: yellow;
+      color: black;
+      opacity: 0.5;
+    }
+  </style>
+
+  <script>
+    document.getElementById('nc_src').onload = function() {
+      var pen = new pensioner();
+      var srcselector = document.getElementById('nc_src');
+
+      targetselector = document.getElementById('nc_lrg');
+      pen.divPixels(srcselector, 5, targetselector, pen.colorMatrix(srcselector));
+
+      targetselector = document.getElementById('nc_lrg_gs_avg');
+      pen.divPixels(srcselector, 5, targetselector, pen.colorMatrix(srcselector));
+      pen.greyScale(document.getElementById('nc_lrg_gs_avg'), 'avg');
+
+      targetselector = document.getElementById('nc_lrg_gs_gimp');
+      pen.divPixels(srcselector, 5, targetselector, pen.colorMatrix(srcselector));
+      pen.greyScale(document.getElementById('nc_lrg_gs_gimp'), 'gimp');
+
+    }
+  </script>
+</body>
+
+</html>
