@@ -1,4 +1,4 @@
-# Pensioner
+# Pensioner.js
 
 Convert css colors to grayscale
 
