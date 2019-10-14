@@ -1,6 +1,6 @@
 # Pensioner.js
 
-Convert CSS colors to grayscale
+*Convert CSS colors to grayscale*
 
 ![screenshot](screenshot.png)
 
