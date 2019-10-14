@@ -1,4 +1,4 @@
-# webscript-pensioner
+# Pensioner
 
 Convert css colors to grayscale
 
