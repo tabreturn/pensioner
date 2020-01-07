@@ -9,6 +9,6 @@ for the greyscale algorithms and approach used.
 
 ## to-do:
 
-* gradient bg's
-* images (backgrounds as well)
-* box shadow & text shadow
+- [ ] gradient bg's
+- [ ] images (backgrounds as well)
+- [ ] box shadow & text shadow
